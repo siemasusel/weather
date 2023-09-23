@@ -18,7 +18,7 @@ func NewService(coordService CoordinatesService, forecastService ForecastService
 	}
 }
 
-func (s *Service) GetCoordinatesInfo(ctx context.Context, city string) (Coordinates, error) {
+func (s *Service) GetCoordinates(ctx context.Context, city string) (Coordinates, error) {
 	return s.coordService.GetCoordinatesForUSCity(ctx, city)
 }
 

@@ -38,7 +38,7 @@ func main() {
 	}
 	city := os.Args[1]
 
-	coordInfo, err := service.GetCoordinatesInfo(ctx, city)
+	coordInfo, err := service.GetCoordinates(ctx, city)
 	if err != nil {
 		slog.ErrorContext(ctx, "Unable to get get coordinates information", "city", city, "err", err.Error())
 		os.Exit(1)
