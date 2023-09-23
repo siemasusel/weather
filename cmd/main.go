@@ -44,6 +44,8 @@ func main() {
 		os.Exit(1)
 	}
 
+	slog.InfoContext(ctx, "Running forecast.", "city", city)
+
 	displayForecastInformation(ctx, coordInfo, service)
 	for {
 		select {
